@@ -1,0 +1,5 @@
+This repo include pactice session for C -Language
+
+Udemy Course - https://globallogic.udemy.com/course/c-programming-for-beginners-/learn/lecture/8794270#overview
+
+Name - c-programming-for-beginners
