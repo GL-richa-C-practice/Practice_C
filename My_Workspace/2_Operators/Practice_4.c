@@ -13,9 +13,9 @@ int main ()
    //result =  a & b;
    //result =  a | b;
    //result =  a ^ b;
-   //result =  ~a;
+   result =  ~a; // 1's complement
    //result =  a << 4;
-   result =  a >> 4;
+   //result =  a >> 4;
 
    printf("Result : %d", result);
 
