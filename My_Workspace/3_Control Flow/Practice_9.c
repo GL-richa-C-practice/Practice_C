@@ -1,4 +1,4 @@
-// While Loop and do-while
+// Challange - To create a guessing game
 
 #include<stdio.h>
 #include<stdbool.h>
