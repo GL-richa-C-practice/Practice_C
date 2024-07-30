@@ -1,8 +1,6 @@
 //Functions
 
 #include<stdio.h>
-#include<math.h>
-
 
 int calculateGCD (int x, int z)
 {
@@ -18,9 +16,9 @@ return gcd;
 
 }
 
-int calculateAbsValue (int y)
+float calculateAbsValue (float y)
 {
-   int abs_val;
+   float abs_val;
    if(y < 0)
    abs_val = (-1)*y;
 
@@ -28,23 +26,27 @@ int calculateAbsValue (int y)
 
 }
 
-int calculateSquareRoot (int r)
+float calculateSquareRoot (float r)
 {
-   float sqrt_val;
-   if(r<0)
-   {
-   sqrt_val = -1.0;}
-   else{
-   sqrt_val = sqrt(r);}
-   return sqrt_val;
+   if (r < 2)
+    return r;
+   
+   float t = r;
+   float s_q = (t + (r / t)) / 2;
+
+   while(t - s_q >= 0.00001){
+      t = s_q;
+      s_q = (t + (r / t)) / 2;
+   }
+   return s_q;
 }
 
 int main()
 {   
    
-   int num_1 = 0, num_2 = 0, num_3 = 0, result = 0, absolute_val = 0;
-   float sqrtRoot_val = 0;
-   int num_4 = 0;
+   int num_1 = 0, num_2 = 0, result = 0;
+   float num_3 = 0, absolute_val = 0, sqrtRoot_val = 0;
+   float num_4 = 0;
    
    printf("Enter 1st number: ");
    scanf("%d", &num_1);
@@ -53,10 +55,10 @@ int main()
    scanf("%d", &num_2);
 
     printf("Enter 3rd number: ");
-   scanf("%d", &num_3);
+   scanf("%f", &num_3);
 
     printf("Enter 4th number: ");
-   scanf("%d", &num_4);
+   scanf("%f", &num_4);
    
     result = calculateGCD (num_1,num_2);
     absolute_val = calculateAbsValue(num_3);
@@ -65,9 +67,9 @@ int main()
 
     printf("GCD for %d and %d = %d\n", num_1, num_2, result); 
 
-    printf("Absolute value of %d = %d\n", num_3, absolute_val);
+    printf("Absolute value of %f = %f\n", num_3, absolute_val);
 
-    printf("Square Root of %d = %.5f\n", num_4, sqrtRoot_val);
+    printf("Square Root of %f = %.5f\n", num_4, sqrtRoot_val);
 
    return 0; 
 }
