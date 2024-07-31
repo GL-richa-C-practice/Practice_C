@@ -48,6 +48,7 @@ int main ()
    scanf("%[^\n]s", word_input2);
    printf("%s\n", word_input2);
 
+   fflush(stdin);
 
    //printf("%s\n", word_input);
    //printf("The length of input string is =  %d\n", length_string(word_input));
