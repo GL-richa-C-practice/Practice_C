@@ -7,7 +7,25 @@ and breadth = 4 is greater than its perimeter.*/
 
 int main ()
 {  
-  
+  int rec_lenght,rec_breath,rec_area,rec_perimeter;
+
+  printf("Enter length of rectangle = ");
+  scanf("%d", &rec_lenght);
+
+  printf("Enter breath of rectangle = ");
+  scanf("%d", &rec_breath);
+
+  rec_area = rec_lenght * rec_breath;
+  printf("Area of rectangle = %d\n", rec_area);
+
+  rec_perimeter = 2*(rec_lenght + rec_breath);
+  printf("Perimeter of rectangle = %d\n", rec_perimeter);
+
+  if(rec_area > rec_perimeter)
+  printf("**********AREA OF RECTANGLE IS GREATER THAN ITS PEREMETER***********\n");
+  else
+  printf("**********AREA OF RECTANGLE IS  NOT GREATER THAN ITS PEREMETER***********\n");
+
   
     return 0;
 }
