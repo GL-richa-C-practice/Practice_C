@@ -7,7 +7,7 @@ on:
      branches: [main]
 jobs:
     ci:
-       runs-on: ubantu-latest
+       runs-on: windows-latest
        steps:
          - uses: action/checkouts@v2
          - uses: bazelbuild/setup-bazelisk@v3
