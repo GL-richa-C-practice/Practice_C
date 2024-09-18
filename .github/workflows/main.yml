@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+     branches: [main]
+  pull_request:
+     branches: [main]
+jobs:
+    ci:
+       runs-on: ubantu-latest
+       steps:
+         - uses: action/checkouts@v2
+         - uses: bazelbuild/setup-bazelisk@v3
+         - run: bazel build //...
+         
+     
+     
