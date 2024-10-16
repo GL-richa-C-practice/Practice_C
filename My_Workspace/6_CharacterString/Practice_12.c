@@ -22,7 +22,7 @@ int main(){
    }
    printf("\n");
 
-   printf("************BUBBLE SORT****************\n");
+   /*printf("************BUBBLE SORT****************\n");
    
    printf("Enter number of string: ");
    scanf("%d", &n);
@@ -41,7 +41,7 @@ int main(){
     for(i = 0; i<=n; i++)
        printf("%s\n",name[i]);     
       }
-   }
+   }*/
 
    return 0;
 }
